@@ -310,7 +310,7 @@ otherService <- allGIDRequests %>%
   filter(n < 200)
 knitr::kable(otherService,
              caption = "Services < 200 records after initial consolidation",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:40%;'")
 
 #combine all service types with low counts into "other type"
@@ -324,7 +324,7 @@ modCount <- modServiceCount()
 serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Current service type counts",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:40%;'")
 ```
 
@@ -457,7 +457,7 @@ serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Record of service type counts",
              align = "l",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:80%;'")
 ```
 The first two columns on the left show the count of records by service name for the original data.  The following two columns show the counts after the reclassification of the **other** records.  The number of **other** records was cut by about 20,000 and redistributed across the rest of the existing service types.
@@ -500,7 +500,7 @@ serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Record of service type counts",
              align = "l",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:80%;'")
 ```
 The final 2 columns show the new service counts after the latest reclassification.  Only a few hundred **other** records were reclassified.
@@ -575,7 +575,7 @@ serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Record of service type counts",
              align = "l",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:95%;'")
 ```
 The latest reclassifications should have decreased the number of sidewalk records and added to types illegal dumping, vegetation service, and graffiti among others which appears to be the case.

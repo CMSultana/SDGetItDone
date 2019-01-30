@@ -354,123 +354,25 @@ otherService <- allGIDRequests %>%
   filter(n < 200)
 knitr::kable(otherService,
              caption = "Services < 200 records after initial consolidation",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:40%;'")
 ```
 
-<table style="width:40%;">
-<caption>
-Services &lt; 200 records after initial consolidation
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:right;">
-n
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-row maintenance
-</td>
-<td style="text-align:right;">
-170
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-abandoned vehicle
-</td>
-<td style="text-align:right;">
-15
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-debris fence
-</td>
-<td style="text-align:right;">
-15
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-channel
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-conveyances
-</td>
-<td style="text-align:right;">
-3
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-parking meter
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-bridge
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-gearbox
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-illegal discharge
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-parking
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-spillway
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-transformer
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-</tbody>
-</table>
+| service\_nameMOD  |    n|
+|:------------------|----:|
+| row maintenance   |  170|
+| abandoned vehicle |   15|
+| debris fence      |   15|
+| channel           |    3|
+| conveyances       |    3|
+| parking meter     |    2|
+| bridge            |    1|
+| gearbox           |    1|
+| illegal discharge |    1|
+| parking           |    1|
+| spillway          |    1|
+| transformer       |    1|
+
 ``` r
 
 #combine all service types with low counts into "other type"
@@ -484,147 +386,28 @@ modCount <- modServiceCount()
 serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Current service type counts",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:40%;'")
 ```
 
-<table style="width:40%;">
-<caption>
-Current service type counts
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:right;">
-n
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:right;">
-6141
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:right;">
-610
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:right;">
-23930
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:right;">
-4561
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:right;">
-52784
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:right;">
-9407
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:right;">
-2668
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:right;">
-1421
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:right;">
-14538
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:right;">
-39042
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:right;">
-1943
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:right;">
-1955
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:right;">
-6844
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:right;">
-15998
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:right;">
-5901
-</td>
-</tr>
-</tbody>
-</table>
+| service\_nameMOD   |      n|
+|:-------------------|------:|
+| curb               |   6141|
+| damaged guardrail  |    610|
+| graffiti           |  23930|
+| illegal dumping    |   4561|
+| other              |  52784|
+| sidewalk repair    |   9407|
+| storm drain        |   2668|
+| street flooded     |   1421|
+| street light       |  14538|
+| street repair      |  39042|
+| street striping    |   1943|
+| street sweeping    |   1955|
+| traffic sign       |   6844|
+| traffic signal     |  15998|
+| vegetation service |   5901|
+
 The number of service types have now been cut down to a much more digestable 15. However, 28% of all records are currently categorized as other. Ideally we could find a way to recategorize some of these requests using more descriptive service types. To do this we can look to see if there is additional information in other fields in the dataset.
 
 Recategorize "other" service type
@@ -803,243 +586,28 @@ serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Record of service type counts",
              align = "l",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:80%;'")
 ```
 
-<table style="width:80%;">
-<caption>
-Record of service type counts
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6141
-</td>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6604
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-610
-</td>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-731
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-23930
-</td>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-24212
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4561
-</td>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4659
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-52784
-</td>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-35844
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-9407
-</td>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-12608
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-2668
-</td>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-3135
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1421
-</td>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1789
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14538
-</td>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14838
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-39042
-</td>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-41394
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-1943
-</td>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-2010
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-1955
-</td>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-3584
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-6844
-</td>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-7808
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-15998
-</td>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-17495
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-5901
-</td>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-11032
-</td>
-</tr>
-</tbody>
-</table>
+| service\_nameMOD   | n     | service\_nameMOD   | n     |
+|:-------------------|:------|:-------------------|:------|
+| curb               | 6141  | curb               | 6604  |
+| damaged guardrail  | 610   | damaged guardrail  | 731   |
+| graffiti           | 23930 | graffiti           | 24212 |
+| illegal dumping    | 4561  | illegal dumping    | 4659  |
+| other              | 52784 | other              | 35844 |
+| sidewalk repair    | 9407  | sidewalk repair    | 12608 |
+| storm drain        | 2668  | storm drain        | 3135  |
+| street flooded     | 1421  | street flooded     | 1789  |
+| street light       | 14538 | street light       | 14838 |
+| street repair      | 39042 | street repair      | 41394 |
+| street striping    | 1943  | street striping    | 2010  |
+| street sweeping    | 1955  | street sweeping    | 3584  |
+| traffic sign       | 6844  | traffic sign       | 7808  |
+| traffic signal     | 15998 | traffic signal     | 17495 |
+| vegetation service | 5901  | vegetation service | 11032 |
+
 The first two columns on the left show the count of records by service name for the original data. The following two columns show the counts after the reclassification of the **other** records. The number of **other** records was cut by about 20,000 and redistributed across the rest of the existing service types.
 
 Recategorize remaining "other" records
@@ -1096,339 +664,28 @@ serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Record of service type counts",
              align = "l",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:80%;'")
 ```
 
-<table style="width:80%;">
-<caption>
-Record of service type counts
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6141
-</td>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6604
-</td>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6604
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-610
-</td>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-731
-</td>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-731
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-23930
-</td>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-24212
-</td>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-24212
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4561
-</td>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4659
-</td>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4659
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-52784
-</td>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-35844
-</td>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-35723
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-9407
-</td>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-12608
-</td>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-12608
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-2668
-</td>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-3135
-</td>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-3135
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1421
-</td>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1789
-</td>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1789
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14538
-</td>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14838
-</td>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14838
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-39042
-</td>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-41394
-</td>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-41394
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-1943
-</td>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-2010
-</td>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-2065
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-1955
-</td>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-3584
-</td>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-3584
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-6844
-</td>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-7808
-</td>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-7808
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-15998
-</td>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-17495
-</td>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-17561
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-5901
-</td>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-11032
-</td>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-11032
-</td>
-</tr>
-</tbody>
-</table>
+| service\_nameMOD   | n     | service\_nameMOD   | n     | service\_nameMOD   | n     |
+|:-------------------|:------|:-------------------|:------|:-------------------|:------|
+| curb               | 6141  | curb               | 6604  | curb               | 6604  |
+| damaged guardrail  | 610   | damaged guardrail  | 731   | damaged guardrail  | 731   |
+| graffiti           | 23930 | graffiti           | 24212 | graffiti           | 24212 |
+| illegal dumping    | 4561  | illegal dumping    | 4659  | illegal dumping    | 4659  |
+| other              | 52784 | other              | 35844 | other              | 35723 |
+| sidewalk repair    | 9407  | sidewalk repair    | 12608 | sidewalk repair    | 12608 |
+| storm drain        | 2668  | storm drain        | 3135  | storm drain        | 3135  |
+| street flooded     | 1421  | street flooded     | 1789  | street flooded     | 1789  |
+| street light       | 14538 | street light       | 14838 | street light       | 14838 |
+| street repair      | 39042 | street repair      | 41394 | street repair      | 41394 |
+| street striping    | 1943  | street striping    | 2010  | street striping    | 2065  |
+| street sweeping    | 1955  | street sweeping    | 3584  | street sweeping    | 3584  |
+| traffic sign       | 6844  | traffic sign       | 7808  | traffic sign       | 7808  |
+| traffic signal     | 15998 | traffic signal     | 17495 | traffic signal     | 17561 |
+| vegetation service | 5901  | vegetation service | 11032 | vegetation service | 11032 |
+
 The final 2 columns show the new service counts after the latest reclassification. Only a few hundred **other** records were reclassified.
 
 ``` r
@@ -1483,435 +740,187 @@ serviceCountMOD <- modCount()
 knitr::kable(serviceCountMOD,
              caption = "Record of service type counts",
              align = "l",
-             format = "html",
+             format = "markdown",
              table.attr = "style='width:95%;'")
 ```
 
-<table style="width:95%;">
-<caption>
-Record of service type counts
-</caption>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="6%" />
+<col width="18%" />
+<col width="6%" />
+<col width="18%" />
+<col width="6%" />
+<col width="18%" />
+<col width="6%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
-<th style="text-align:left;">
-service\_nameMOD
-</th>
-<th style="text-align:left;">
-n
-</th>
+<tr class="header">
+<th align="left">service_nameMOD</th>
+<th align="left">n</th>
+<th align="left">service_nameMOD</th>
+<th align="left">n</th>
+<th align="left">service_nameMOD</th>
+<th align="left">n</th>
+<th align="left">service_nameMOD</th>
+<th align="left">n</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6141
-</td>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6604
-</td>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6604
-</td>
-<td style="text-align:left;">
-curb
-</td>
-<td style="text-align:left;">
-6669
-</td>
+<tr class="odd">
+<td align="left">curb</td>
+<td align="left">6141</td>
+<td align="left">curb</td>
+<td align="left">6604</td>
+<td align="left">curb</td>
+<td align="left">6604</td>
+<td align="left">curb</td>
+<td align="left">6669</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-610
-</td>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-731
-</td>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-731
-</td>
-<td style="text-align:left;">
-damaged guardrail
-</td>
-<td style="text-align:left;">
-742
-</td>
+<tr class="even">
+<td align="left">damaged guardrail</td>
+<td align="left">610</td>
+<td align="left">damaged guardrail</td>
+<td align="left">731</td>
+<td align="left">damaged guardrail</td>
+<td align="left">731</td>
+<td align="left">damaged guardrail</td>
+<td align="left">742</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-23930
-</td>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-24212
-</td>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-24212
-</td>
-<td style="text-align:left;">
-graffiti
-</td>
-<td style="text-align:left;">
-24484
-</td>
+<tr class="odd">
+<td align="left">graffiti</td>
+<td align="left">23930</td>
+<td align="left">graffiti</td>
+<td align="left">24212</td>
+<td align="left">graffiti</td>
+<td align="left">24212</td>
+<td align="left">graffiti</td>
+<td align="left">24484</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4561
-</td>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4659
-</td>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4659
-</td>
-<td style="text-align:left;">
-illegal dumping
-</td>
-<td style="text-align:left;">
-4705
-</td>
+<tr class="even">
+<td align="left">illegal dumping</td>
+<td align="left">4561</td>
+<td align="left">illegal dumping</td>
+<td align="left">4659</td>
+<td align="left">illegal dumping</td>
+<td align="left">4659</td>
+<td align="left">illegal dumping</td>
+<td align="left">4705</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-52784
-</td>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-35844
-</td>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-35723
-</td>
-<td style="text-align:left;">
-other
-</td>
-<td style="text-align:left;">
-35723
-</td>
+<tr class="odd">
+<td align="left">other</td>
+<td align="left">52784</td>
+<td align="left">other</td>
+<td align="left">35844</td>
+<td align="left">other</td>
+<td align="left">35723</td>
+<td align="left">other</td>
+<td align="left">35723</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-9407
-</td>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-12608
-</td>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-12608
-</td>
-<td style="text-align:left;">
-sidewalk repair
-</td>
-<td style="text-align:left;">
-11202
-</td>
+<tr class="even">
+<td align="left">sidewalk repair</td>
+<td align="left">9407</td>
+<td align="left">sidewalk repair</td>
+<td align="left">12608</td>
+<td align="left">sidewalk repair</td>
+<td align="left">12608</td>
+<td align="left">sidewalk repair</td>
+<td align="left">11202</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-2668
-</td>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-3135
-</td>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-3135
-</td>
-<td style="text-align:left;">
-storm drain
-</td>
-<td style="text-align:left;">
-3132
-</td>
+<tr class="odd">
+<td align="left">storm drain</td>
+<td align="left">2668</td>
+<td align="left">storm drain</td>
+<td align="left">3135</td>
+<td align="left">storm drain</td>
+<td align="left">3135</td>
+<td align="left">storm drain</td>
+<td align="left">3132</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1421
-</td>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1789
-</td>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1789
-</td>
-<td style="text-align:left;">
-street flooded
-</td>
-<td style="text-align:left;">
-1789
-</td>
+<tr class="even">
+<td align="left">street flooded</td>
+<td align="left">1421</td>
+<td align="left">street flooded</td>
+<td align="left">1789</td>
+<td align="left">street flooded</td>
+<td align="left">1789</td>
+<td align="left">street flooded</td>
+<td align="left">1789</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14538
-</td>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14838
-</td>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14838
-</td>
-<td style="text-align:left;">
-street light
-</td>
-<td style="text-align:left;">
-14853
-</td>
+<tr class="odd">
+<td align="left">street light</td>
+<td align="left">14538</td>
+<td align="left">street light</td>
+<td align="left">14838</td>
+<td align="left">street light</td>
+<td align="left">14838</td>
+<td align="left">street light</td>
+<td align="left">14853</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-39042
-</td>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-41394
-</td>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-41394
-</td>
-<td style="text-align:left;">
-street repair
-</td>
-<td style="text-align:left;">
-41415
-</td>
+<tr class="even">
+<td align="left">street repair</td>
+<td align="left">39042</td>
+<td align="left">street repair</td>
+<td align="left">41394</td>
+<td align="left">street repair</td>
+<td align="left">41394</td>
+<td align="left">street repair</td>
+<td align="left">41415</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-1943
-</td>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-2010
-</td>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-2065
-</td>
-<td style="text-align:left;">
-street striping
-</td>
-<td style="text-align:left;">
-2065
-</td>
+<tr class="odd">
+<td align="left">street striping</td>
+<td align="left">1943</td>
+<td align="left">street striping</td>
+<td align="left">2010</td>
+<td align="left">street striping</td>
+<td align="left">2065</td>
+<td align="left">street striping</td>
+<td align="left">2065</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-1955
-</td>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-3584
-</td>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-3584
-</td>
-<td style="text-align:left;">
-street sweeping
-</td>
-<td style="text-align:left;">
-3601
-</td>
+<tr class="even">
+<td align="left">street sweeping</td>
+<td align="left">1955</td>
+<td align="left">street sweeping</td>
+<td align="left">3584</td>
+<td align="left">street sweeping</td>
+<td align="left">3584</td>
+<td align="left">street sweeping</td>
+<td align="left">3601</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-6844
-</td>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-7808
-</td>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-7808
-</td>
-<td style="text-align:left;">
-traffic sign
-</td>
-<td style="text-align:left;">
-7408
-</td>
+<tr class="odd">
+<td align="left">traffic sign</td>
+<td align="left">6844</td>
+<td align="left">traffic sign</td>
+<td align="left">7808</td>
+<td align="left">traffic sign</td>
+<td align="left">7808</td>
+<td align="left">traffic sign</td>
+<td align="left">7408</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-15998
-</td>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-17495
-</td>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-17561
-</td>
-<td style="text-align:left;">
-traffic signal
-</td>
-<td style="text-align:left;">
-17537
-</td>
+<tr class="even">
+<td align="left">traffic signal</td>
+<td align="left">15998</td>
+<td align="left">traffic signal</td>
+<td align="left">17495</td>
+<td align="left">traffic signal</td>
+<td align="left">17561</td>
+<td align="left">traffic signal</td>
+<td align="left">17537</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-5901
-</td>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-11032
-</td>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-11032
-</td>
-<td style="text-align:left;">
-vegetation service
-</td>
-<td style="text-align:left;">
-12418
-</td>
+<tr class="odd">
+<td align="left">vegetation service</td>
+<td align="left">5901</td>
+<td align="left">vegetation service</td>
+<td align="left">11032</td>
+<td align="left">vegetation service</td>
+<td align="left">11032</td>
+<td align="left">vegetation service</td>
+<td align="left">12418</td>
 </tr>
 </tbody>
 </table>
+
 The latest reclassifications should have decreased the number of sidewalk records and added to types illegal dumping, vegetation service, and graffiti among others which appears to be the case.
 
 Modify subtypes
