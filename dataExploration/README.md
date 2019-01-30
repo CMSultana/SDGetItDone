@@ -51,7 +51,7 @@ options(knitr.duplicate.label = 'allow')
 Data grooming
 -------------
 
-A lot of effort went into grooming the data set to increase consistency and completenes for the classification of the service request types. [Check out the data cleaning efforts](dataCleaning).
+A lot of effort went into grooming the data set to increase consistency and completenes for the classification of the service request types. [Check out the data cleaning efforts](../dataCleaning).
 
 Refine date/time data
 ---------------------

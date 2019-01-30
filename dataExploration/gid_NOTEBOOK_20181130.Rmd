@@ -709,8 +709,8 @@ allGIDRequests$source[changeIDX] <- "other"
 ```
 
 ##Data grooming
-A lot of effort went into grooming the data set to increase consistency and completenes for the classification of the service request types. [Check out the data cleaning efforts](dataCleaning). 
-```{r hiddenChild, echo = FALSE}
+A lot of effort went into grooming the data set to increase consistency and completenes for the classification of the service request types. [Check out the data cleaning efforts](../dataCleaning). 
+```{r hiddenChild, echo = FALSE, cache = FALSE}
 #this loads and runs the data grooming code in the environment but keeps it invisible in the document
 stringChild <- paste0(rootDir, "/dataCleaning/gid_Grooming_20180930.Rmd")
 invisible(knitr::knit_child(stringChild, quiet = TRUE))

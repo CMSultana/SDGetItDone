@@ -327,6 +327,7 @@ knitr::kable(serviceCountMOD,
              format = "html",
              table.attr = "style='width:40%;'")
 ```
+
 The number of service types have now been cut down to a much more digestable 15. However, `r round(100*serviceCountMOD[serviceCountMOD$service_nameMOD == "other",]$n/sum(serviceCountMOD$n))`% of all records are currently categorized as other. Ideally we could find a way to recategorize some of these requests using more descriptive service types. To do this we can look to see if there is additional information in other fields in the dataset.
 
 ##Recategorize "other" service type
